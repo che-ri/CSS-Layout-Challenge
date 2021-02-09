@@ -28,8 +28,9 @@ header {
 
 header .fa-paperclip{
     position: absolute;
+    text-align: center;
     color: #c44569;
-    top: 0;
+    top: -70px;
     bottom: 0;
     left: 0;
     right: 0;
