@@ -1,0 +1,104 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 100%;
+    height: 100vh;
+}
+
+
+h1{
+    margin: 25px;
+    text-align: center;
+    font-size: 50px;
+}
+
+
+
+.content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    grid-auto-rows: 300px;
+}
+
+/* grid-children */
+.content li{
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.content li h5,
+.content li footer{
+    text-align: center;
+}
+
+.content li footer{
+    font-size: 10px;
+}
+
+.light-gray{
+    background-color: #BFBDA7;
+}
+
+.picture1{
+    background-image: url('img/anne-sack-yq-L77K8Ia4-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.orange{
+    background-color: #FE4714;
+}
+
+.picture2{
+    background-image: url('img/j-lee--qer8evRRbo-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gray{
+    background-color: #847E96;
+}
+
+.neon-green{
+    background-color: #D0FF71;
+}
+
+.wine{
+    background-color: #993333;
+}
+
+.blue{
+    background-color: #3AAAFA;
+}
+
+.picture3{
+    background-image: url('img/melnychuk-nataliya-YfQRzKwYLx8-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.green{
+    background-color: #41907A;
+}
+
+.picture4{
+    background-image: url('img/sergey-sokolov-yxJavcfExYs-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.indipink{
+    background-color: #E3C4E5;
+}
