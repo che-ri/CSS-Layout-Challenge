@@ -1,0 +1,190 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+* {
+    box-sizing: border-box;
+}
+
+a{
+    color: inherit;
+    
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 100%;
+    height: 100vh;
+    font-size: 5px;
+}
+
+.body-container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 30px 2fr 2fr 30px;
+    grid-template-rows: 30px 5fr 5fr 2fr 30px;
+    background-color: white;
+    color: orange;
+    text-transform: uppercase;
+    line-height: .7;
+
+}
+
+/* grid-child */
+header {
+    grid-column: 1/-1;
+    border: 3px solid orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* grid-child */
+aside.menu-left {
+    grid-column: 1/2;
+    grid-row: 2/5;
+    border: 3px solid orange;
+    border-top: none;
+    border-bottom: none;
+}
+
+.menu-left .menu-left__main {
+    background-color: orange;
+    color: white;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-left__main li {
+    padding: 5px 0px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    list-style: none;
+
+}
+
+.menu-left .menu-left__newspaper{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.menu-left .menu-left__newspaper span{
+    padding: 5px 0px;
+    writing-mode: vertical-rl;
+    transform: rotateZ(180deg);
+}
+
+.menu-left .menu-left__link{
+    border-top: 3px solid orange;
+    text-align: center;
+}
+
+.menu-left .menu-left__link i{
+    display: block;
+}
+
+/* grid-child */
+main {
+    grid-column: 2/4;
+    grid-row: 2/5;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+main .main__left-column{
+    background-image: url(beth-d--lw_lvc9hq8-unsplash.jpg);
+    background-size: cover;
+    width: 50%;
+}
+
+main .main__right-column{
+    background-image: url(charles-deluvio-PqsImnjuElM-unsplash.jpg);
+    background-size: cover;
+    background-position: left;
+    width: 50%;
+}
+
+main .title{
+    position: absolute;
+    font-size: 50px;
+    color: white;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+}
+
+main .title h1{
+    line-height: 1;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* grid-child */
+.body-container .menu-right {
+    grid-column: -1/-2;
+    grid-row: 2/5;
+    border: 3px solid orange;
+    border-top: none;
+    border-bottom: none;
+    background-color: #46AA50;
+
+}
+.menu-right .menu-right__order{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 0px;
+    width: 100%;
+    border-bottom: 3px solid orange;
+}
+
+.menu-right .menu-right__order span{
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+.menu-right .menu-right_reserv{
+    width: 100%;
+    padding: 5px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-right .menu-right_reserv span{
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+/* grid-child */
+.body-container footer {
+    grid-row: -1/-2;
+    grid-column: 1/-1;
+    border: 3px solid orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.link {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: orange;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.link i{
+    color: white;
+}
