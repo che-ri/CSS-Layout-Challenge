@@ -1,4 +1,7 @@
 @import "reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
 
 *{
     box-sizing: border-box;
@@ -10,6 +13,7 @@ a{
 }
 
 body{
+    font-family: 'Shippori Mincho', serif;
     height: 100vh;
     width: 100%;
     padding: 10px;
@@ -31,13 +35,19 @@ body{
     background-color: white;
 }
 
+
+
+
 /* main-component */
 .main-component{
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
     line-height: 1.2;
 }
 
 .main-component h3{
-    font-weight: 600;
+    padding-top: 5px;
+    font-weight: 800;
+    font-size: 22px;
     margin-bottom: 30px;
 }
 
@@ -49,14 +59,45 @@ body{
 
 .main-component .main-component__explan{
     width: 100%;
-    font-size: 14px;
+    font-size: 15px;
 }
+/*  */
 
-.a1-office{
+
+
+section.a1-office{
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1b3b3a+0,203533+49&1+49,0.57+100 */
+background: -moz-linear-gradient(top,  rgba(27,59,58,1) 0%, rgba(32,53,51,1) 49%, rgba(32,53,51,0.57) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(27,59,58,1) 0%,rgba(32,53,51,1) 49%,rgba(32,53,51,0.57) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(27,59,58,1) 0%,rgba(32,53,51,1) 49%,rgba(32,53,51,0.57) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b3b3a', endColorstr='#91203533',GradientType=0 ); /* IE6-9 */
+
+text-shadow: 2px 4px 3px rgba(0,0,0,0.9);
+    color: white;
     grid-row: 1/3;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.a1-office .main-component h3{
+    font-family: 'Abril Fatface', cursive;
+    font-size: 2vw;
+    padding-top: 0;
+    animation: fadeIn 2s linear infinite;
+    word-spacing: 0.3em;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
 }
 
 .a1-office .main-component p{
@@ -66,6 +107,7 @@ body{
 .a1-office nav ol{
     margin: 0 -7px;
     border-top: 1px solid black;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.9);
 
 }
 
@@ -77,12 +119,22 @@ body{
 }
 
 .a1-office nav li:hover{
-    background-color: rgba(128, 128, 128, 0.548);
+    background-color: #fff;
+    color: #1B3B3A;
     cursor: pointer;
+    text-shadow: none;
+}
+
+.a1-office .sns{
+    margin-top: 10px;
+}
+
+.a1-office .sns i:hover{
+    transform:scale(1.2)
 }
 
 .a1-office footer{
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .a1-office footer div{
@@ -90,13 +142,21 @@ body{
     line-height: 1.3;
 }
 
+
 .a1-office footer span{
     font-weight: bold;
 }
 
-.a1-office .translation a:first-child{
-border-right: 1px solid black;
-padding-right: 6px;
+
+
+.translation a{
+    padding: 5px;
+}
+
+.translation a:hover{
+    background-color: white;
+    color: #1B3B3A;
+    border-radius: 5px;
 }
 
 .home{
@@ -127,6 +187,32 @@ section.main-img{
     background:url(./img/1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    text-align: end;
+}
+
+.main-img--left span{
+    border-radius: 10px;
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.493);
+    animation: zoomIn 1s ease-in-out infinite;
+}
+
+@keyframes zoomIn{
+    0%{
+        transform: translate(-10px);
+    }
+    50%{
+        transform: translateX(10px)
+    }
+    100%{
+        transform: translateX(-10px);
+    }
+}
+
+.main-img--left span i{
+margin-left: 10px;
 }
 
 .main-img--right{
@@ -142,6 +228,17 @@ section.main-img{
     background-repeat: no-repeat;
     grid-column: 1/4;
     grid-row:1/2;
+}
+
+.main-img .img2:hover{
+    background-position: center bottom;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    height: 85%;
+    z-index: 2
 }
 
 .main-img--right div:nth-child(2){
@@ -215,10 +312,47 @@ section.sub-img{
 }
 
 .sub-img div:last-child{
-    background: url(./img/10.jpg);
-    background-size: cover;
+    /* background: url(./img/10.jpg); */
+    /* background-size: cover; */
+    /* background-size: 130%; */
     background-repeat: no-repeat;
     background-position: center;
     grid-column: 3/4;
     grid-row:1/3;
+    overflow: hidden;
+    /* animation: movingImg 3s linear infinite; */
+}
+
+.moving-img img{
+    width: 100%;
+    animation: movingImg 20s linear infinite;
+}
+
+@keyframes movingImg{
+    0%{
+        transform: translatey(-10px);
+    }
+    50%{
+        transform: translatey(-200px);
+    }
+    100%{
+        transform: translatey(-10px);
+    }
+}
+
+/* @keyframes movingImg{
+    0%{
+        transform: translateX(10px);
+    }
+    50%{
+        transform: translateX(-20px);
+    }
+    100%{
+        transform: translateX(10px);
+    }
+} */
+
+.click{
+    margin-left: 10px;
+    color: #1B3B3A;;
 }
